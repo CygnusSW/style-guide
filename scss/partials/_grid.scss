@@ -8,16 +8,13 @@
 	margin: 1% 0 1% 0;
 }
 
-.group {
-    @include flex(space-around, row);
+.row {
+    @include flex(space-around);
 }
-
-
-/*  GROUPING  */
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1; /* For IE 6/7 */ }
+.row { zoom:1; /* For IE 6/7 */ }
+.row:before,
+.row:after { content:""; display:table; }
+.row:after { clear:both;}
 
 
 ///GRID GENERATOR
@@ -33,6 +30,15 @@ $total-width-for-cols: $width-per-col * $num-of-grid-cols;
 
     @if ($col != $num-of-grid-cols)
     {
+        .xs#{$col} {
+            width: decimal-round($width-per-col * $col, 2, 'floor'); 
+        }
+        
+        .offset-xs#{$col} {
+            $p2: ($num-of-grid-cols/$col) * 1%;//Convert to Percent
+            margin-left: (100%/$p2) * 1%;
+        }
+
         .s#{$col} {
             width: decimal-round($width-per-col * $col, 2, 'floor'); 
         }
@@ -40,8 +46,27 @@ $total-width-for-cols: $width-per-col * $num-of-grid-cols;
             $p2: ($num-of-grid-cols/$col) * 1%;//Convert to Percent
             margin-left: (100%/$p2) * 1%;
         }
-    } @else {        
-        .s#{$col} {
+
+        
+        .m#{$col} {
+            width: decimal-round($width-per-col * $col, 2, 'floor'); 
+        }
+        .offset-m#{$col} {
+            $p2: ($num-of-grid-cols/$col) * 1%;//Convert to Percent
+            margin-left: (100%/$p2) * 1%;
+        }
+
+        .l#{$col} {
+            width: decimal-round($width-per-col * $col, 2, 'floor'); 
+        }
+        .offset-l#{$col} {
+            $p2: ($num-of-grid-cols/$col) * 1%;//Convert to Percent
+            margin-left: (100%/$p2) * 1%;
+        }
+
+
+    } @else {          
+        .xs#{$col}, .s#{$col}, .m#{$col}, .l#{$col} {
             width: 100%;
         }
     }

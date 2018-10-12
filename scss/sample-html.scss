@@ -1,0 +1,15 @@
+@import "./main.scss";
+
+section.depth div {
+    margin-top:30px;
+    padding:10px;
+    text-align: center;
+}
+
+section.grid .col p {
+    text-align: center;
+}
+
+section.grid .row div {
+    @extend .z-depth-1;
+}

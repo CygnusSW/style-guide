@@ -438,7 +438,7 @@
   padding-left: 50;
 }
 
-.z-depth-1 {
+.z-depth-1, section.grid .row div {
   z-index: 1;
   box-shadow: 1px 1px 1px #b4b4b4, -1px 1px 1px #b4b4b4, -1px -1px 1px #b4b4b4, 1px -1px 1px #b4b4b4;
 }
@@ -623,14 +623,6 @@
   margin-left: 8.3333333333%;
 }
 
-.xl1 {
-  width: 6.86%;
-}
-
-.offset-xl1 {
-  margin-left: 8.3333333333%;
-}
-
 .xs2 {
   width: 13.72%;
 }
@@ -660,14 +652,6 @@
 }
 
 .offset-l2 {
-  margin-left: 16.6666666667%;
-}
-
-.xl2 {
-  width: 13.72%;
-}
-
-.offset-xl2 {
   margin-left: 16.6666666667%;
 }
 
@@ -703,14 +687,6 @@
   margin-left: 25%;
 }
 
-.xl3 {
-  width: 20.58%;
-}
-
-.offset-xl3 {
-  margin-left: 25%;
-}
-
 .xs4 {
   width: 27.44%;
 }
@@ -740,14 +716,6 @@
 }
 
 .offset-l4 {
-  margin-left: 33.3333333333%;
-}
-
-.xl4 {
-  width: 27.44%;
-}
-
-.offset-xl4 {
   margin-left: 33.3333333333%;
 }
 
@@ -783,14 +751,6 @@
   margin-left: 41.6666666667%;
 }
 
-.xl5 {
-  width: 34.3%;
-}
-
-.offset-xl5 {
-  margin-left: 41.6666666667%;
-}
-
 .xs6 {
   width: 41.16%;
 }
@@ -820,14 +780,6 @@
 }
 
 .offset-l6 {
-  margin-left: 50%;
-}
-
-.xl6 {
-  width: 41.16%;
-}
-
-.offset-xl6 {
   margin-left: 50%;
 }
 
@@ -863,14 +815,6 @@
   margin-left: 58.3333333333%;
 }
 
-.xl7 {
-  width: 48.02%;
-}
-
-.offset-xl7 {
-  margin-left: 58.3333333333%;
-}
-
 .xs8 {
   width: 54.88%;
 }
@@ -900,14 +844,6 @@
 }
 
 .offset-l8 {
-  margin-left: 66.6666666667%;
-}
-
-.xl8 {
-  width: 54.88%;
-}
-
-.offset-xl8 {
   margin-left: 66.6666666667%;
 }
 
@@ -943,14 +879,6 @@
   margin-left: 75%;
 }
 
-.xl9 {
-  width: 61.74%;
-}
-
-.offset-xl9 {
-  margin-left: 75%;
-}
-
 .xs10 {
   width: 68.6%;
 }
@@ -980,14 +908,6 @@
 }
 
 .offset-l10 {
-  margin-left: 83.3333333333%;
-}
-
-.xl10 {
-  width: 68.6%;
-}
-
-.offset-xl10 {
   margin-left: 83.3333333333%;
 }
 
@@ -1023,15 +943,7 @@
   margin-left: 91.6666666667%;
 }
 
-.xl11 {
-  width: 75.46%;
-}
-
-.offset-xl11 {
-  margin-left: 91.6666666667%;
-}
-
-.s12 {
+.xs12, .s12, .m12, .l12 {
   width: 100%;
 }
 
@@ -1045,4 +957,14 @@ h1 {
   font-size: 36pt;
 }
 
-/*# sourceMappingURL=main.css.map */
+section.depth div {
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+section.grid .col p {
+  text-align: center;
+}
+
+/*# sourceMappingURL=sample.css.map */
