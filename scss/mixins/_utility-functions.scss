@@ -1,0 +1,10 @@
+@function strip-units($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin flex($justification: flex-start, $direction: row)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justification;
+}

@@ -1,8 +1,10 @@
 @import "partials/_variables";
-@import "partials/_generated.scss";
-
+@import "partials/_generated";
+@import "partials/_grid";
 html, body {
     font-size: $base-font-size;
+    padding:0px;
+    margin: 0px;
 }
 
 h1 {

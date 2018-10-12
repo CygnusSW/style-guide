@@ -1,6 +1,6 @@
 $i: 0;
 
-@while $i <= 400 {
+@while $i <= 50 {
     .m-#{$i} {
         margin: $i;
     }
