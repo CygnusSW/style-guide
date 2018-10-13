@@ -4,6 +4,10 @@ section.depth div {
     margin-top:30px;
     padding:10px;
     text-align: center;
+
+    & ul li {
+        text-align: left;
+    }
 }
 
 section.grid .col p {

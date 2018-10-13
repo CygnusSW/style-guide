@@ -1,3 +1,5 @@
+@import "../partials/variables";
+
 @function strip-units($value) {
     @return $value / ($value * 0 + 1);
 }
@@ -7,4 +9,47 @@
     display: flex;
     flex-direction: $direction;
     justify-content: $justification;
+}
+
+
+@mixin breakpoint($query)
+{
+    @if map-has-key($breakpoints, $query)
+    {
+        $breakpoint: map-get($breakpoints, $query);
+        $min-breakpoint: nth($breakpoint, 1);
+        $max-breakpoint: nth($breakpoint, 2);
+
+        @if ($min-breakpoint == null and $max-breakpoint == null)
+        {
+                @content;
+        }
+        @else if ($min-breakpoint == null)
+        {
+            @media (max-width: $max-breakpoint)
+            {
+                @content;
+            }
+        }
+        @else if ($max-breakpoint == null)
+        {
+            @media (min-width: $min-breakpoint)
+            {
+                @content;
+            }
+        }
+        @else 
+        {
+            @media (min-width: $min-breakpoint) and (max-width: $max-breakpoint)
+            {
+                @content;
+            }
+        }
+            
+
+    } 
+    @else 
+    {
+        @warn "Media query for " + $query + " not found.";
+    }
 }

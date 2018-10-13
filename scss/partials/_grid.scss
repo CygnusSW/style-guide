@@ -4,20 +4,22 @@
 /*  COLUMN SETUP  */
 .col {
 	display: block;
-	float:left;
+	// float:left;
 	margin: 1% 0 1% 0;
 }
 
 .row {
-    @include flex(space-around);
+    @include flex(space-evenly);
+    flex-wrap: wrap;
 }
 .row { zoom:1; /* For IE 6/7 */ }
 .row:before,
-.row:after { content:""; display:table; }
+// .row:after { content:""; display:table; }
 .row:after { clear:both;}
 
 
 ///GRID GENERATOR
+@debug "Grid-Breakpoints configured for: " + map-keys($breakpoints);
 @debug "Generating grid for " + $num-of-grid-cols + " columns with margin of " + $grid-margin;
 $total-margin: $grid-margin * ($num-of-grid-cols - 1);
 @debug "Total-Margin: " + $total-margin;
@@ -26,48 +28,29 @@ $width-per-col: decimal-round((100 - $total-margin) / $num-of-grid-cols, 2, "flo
 $total-width-for-cols: $width-per-col * $num-of-grid-cols;
 @debug "Total width for all columns: " + $total-width-for-cols;
 
-@for $col from 1 through $num-of-grid-cols {    
-
-    @if ($col != $num-of-grid-cols)
+$currIndex: 0;
+@each $breakpoint in map-keys($breakpoints) //xs, s, m, l, xl, etc.
+{
+    @include breakpoint($breakpoint)
     {
-        .xs#{$col} {
-            width: decimal-round($width-per-col * $col, 2, 'floor'); 
-        }
+        @for $col from 1 through $num-of-grid-cols {    
+    
+            @if ($col != $num-of-grid-cols)
+            { 
+                .#{$breakpoint}#{$col} {
+                    width: decimal-round($width-per-col * $col, 2, 'floor'); 
+                }
+                
+                .offset-#{$breakpoint}#{$col} {
+                    $p2: ($num-of-grid-cols/$col) * 1%;//Convert to Percent
+                    margin-left: (100%/$p2) * 1%;
+                }     
         
-        .offset-xs#{$col} {
-            $p2: ($num-of-grid-cols/$col) * 1%;//Convert to Percent
-            margin-left: (100%/$p2) * 1%;
-        }
-
-        .s#{$col} {
-            width: decimal-round($width-per-col * $col, 2, 'floor'); 
-        }
-        .offset-s#{$col} {
-            $p2: ($num-of-grid-cols/$col) * 1%;//Convert to Percent
-            margin-left: (100%/$p2) * 1%;
-        }
-
-        
-        .m#{$col} {
-            width: decimal-round($width-per-col * $col, 2, 'floor'); 
-        }
-        .offset-m#{$col} {
-            $p2: ($num-of-grid-cols/$col) * 1%;//Convert to Percent
-            margin-left: (100%/$p2) * 1%;
-        }
-
-        .l#{$col} {
-            width: decimal-round($width-per-col * $col, 2, 'floor'); 
-        }
-        .offset-l#{$col} {
-            $p2: ($num-of-grid-cols/$col) * 1%;//Convert to Percent
-            margin-left: (100%/$p2) * 1%;
-        }
-
-
-    } @else {          
-        .xs#{$col}, .s#{$col}, .m#{$col}, .l#{$col} {
-            width: 100%;
+            } @else {          
+                .#{$breakpoint}#{$col} {
+                    width: 100%;
+                }
+            }
         }
     }
 }
