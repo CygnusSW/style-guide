@@ -1,5 +1,27 @@
 @import "./main.scss";
 
+
+html, body {
+    font-size: $base-font-size;
+    padding:0px;
+    margin: 0px;
+}
+
+h1 {
+    font-size: $base-font-size * 2;
+}
+
+p {
+    font-size: $base-font-size;
+    margin: 1px 0px;
+}
+
+.style-guide-title {
+    background: $color-primary;
+    margin: 0px;
+}
+
+
 section.depth div {
     margin-top:30px;
     padding:10px;
@@ -10,10 +32,28 @@ section.depth div {
     }
 }
 
-section.grid .col p {
+section.grid-flex .col p {
     text-align: center;
 }
 
-section.grid .row div {
+section.grid-flex .row div {
     @extend .z-depth-1;
+}
+
+
+body {    
+    justify-content: flex-start!important;
+}
+
+aside {
+    background: $color-secondary;
+    height: 60vh;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 15vh;
+    right: 0;
+}
+
+main {
+    margin-left: $grid_margin!important;
 }

@@ -5,7 +5,6 @@
 .col {
 	display: block;
 	// float:left;
-	margin: 1% 0 1% 0;
 }
 
 .row {
@@ -33,7 +32,7 @@ $currIndex: 0;
 {
     @include breakpoint($breakpoint)
     {
-        @for $col from 1 through $num-of-grid-cols {    
+        @for $col from 0 through $num-of-grid-cols {    
     
             @if ($col != $num-of-grid-cols)
             { 
