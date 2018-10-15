@@ -48,6 +48,6 @@ $i: 0;
 @for $j from 1 through 25 {
     .z-depth-#{$j} {
         z-index: #{$j};
-        box-shadow: #{$j}px #{$j}px #{$j}px rgba(180, 180, 180, 1), -#{$j}px #{$j}px #{$j}px rgba(180, 180, 180, 1), -#{$j}px -#{$j}px #{$j}px rgba(180, 180, 180, 1), #{$j}px -#{$j}px #{$j}px rgba(180, 180, 180, 1);
+        box-shadow: #{$j}px #{$j}px #{$j}px rgba(180, 180, 180, (1 - (($j * 2) /100))), -#{$j}px #{$j}px #{$j}px rgba(180, 180, 180, (1 - (($j * 2) /100))), -#{$j}px -#{$j}px #{$j}px rgba(180, 180, 180, (1 - (($j * 2) /100))), #{$j}px -#{$j}px #{$j}px rgba(180, 180, 180, (1 - (($j * 2) /100)));
     }
 }
