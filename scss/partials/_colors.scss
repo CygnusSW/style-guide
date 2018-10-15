@@ -1,0 +1,20 @@
+@import "../variables/color-variables";
+
+$color-counter: 0;
+@each $color, $map in $colors
+{    
+    @if $color-counter == 0
+    {
+        @debug "Generating Colors: ";
+        $color-counter: $color-counter + 1; 
+    }
+    @debug $color;
+
+    @each $co in map-keys($map) {
+        .#{$color}.#{$co}
+        {
+            background: map-get($map, $co);
+        }
+        
+    }
+}

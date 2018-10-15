@@ -17,7 +17,12 @@ p {
 }
 
 .style-guide-title {
+    position: sticky;
+    top: 0px;
     margin: 0px;
+    background: #FFFFFF;
+    @extend .z-depth-25;
+    z-index: 26;
     & nav {        
         align-items: flex-end;
     }

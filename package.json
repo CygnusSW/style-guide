@@ -11,6 +11,9 @@
   "author": "Cory Johnson",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^4.0.1"
+    "concurrently": "^4.0.1",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.14.2"
   }
 }
