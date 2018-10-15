@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass:watch": "sass --watch scss/sample-html.scss:css/sample.css scss/main.scss:css/main.css",
+    "pug:watch": "pug --watch index.pug index.html",
+    "serve": "concurrently \"npm run-script sass:watch\" \"npm run-script pug:watch\""
   },
   "author": "Cory Johnson",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  }
 }

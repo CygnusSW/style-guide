@@ -764,8 +764,16 @@ p {
   margin: 1px 0px; }
 
 .style-guide-title {
-  background: #2196F3;
   margin: 0px; }
+  .style-guide-title nav {
+    align-items: flex-end; }
+  .style-guide-title ul, .style-guide-title nav {
+    display: inline-block;
+    align-items: center;
+    justify-content: center; }
+    .style-guide-title ul li, .style-guide-title nav li {
+      display: inline-block;
+      margin-left: 50px; }
 
 section.depth div {
   margin-top: 30px;
@@ -781,13 +789,14 @@ body {
   justify-content: flex-start !important; }
 
 aside {
-  background: #ffd180;
   height: 60vh;
   position: -webkit-sticky;
   /* Safari */
   position: sticky;
-  top: 15vh;
+  top: 20vh;
   right: 0; }
+  aside ul {
+    list-style: none; }
 
 main {
   margin-left: 1.6% !important; }

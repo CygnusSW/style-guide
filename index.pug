@@ -3,12 +3,10 @@ html
     header
         link(rel="stylesheet" href="css/sample.css")
     body(class="row")
-        div(class="col xs12 style-guide-title")
-            button(type="button" onclick="downloadAssets") Download
-            h1(class="col xs10") Cygnus Style Guide
-
-        aside(class="col xs0 m2")
-                ul
+        div(class="col xs12 row style-guide-title z-depth-8")
+            h1(class="col xs6") Cygnus Style Guide
+            nav(class="col xs6 row")
+                ul(class="row")
                     li 
                         a(href="#grid-flex") Grid (Flex)
                     li 
@@ -17,7 +15,7 @@ html
                         a(href="#color") Colors
                     li 
                         a(href="#typography") Typography
-        main(class="col xs12 m10")
+        main(class="col xs12")
             section(class="grid-flex")
                 a(name="grid-flex")
                 h2 Grid (Flex-Box)

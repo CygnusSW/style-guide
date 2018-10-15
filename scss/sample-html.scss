@@ -17,8 +17,19 @@ p {
 }
 
 .style-guide-title {
-    background: $color-primary;
     margin: 0px;
+    & nav {        
+        align-items: flex-end;
+    }
+    & ul, & nav {
+        display: inline-block;   
+        align-items: center;  
+        justify-content:center;   
+        & li {
+            display: inline-block;
+            margin-left: 50px;
+        }
+    }
 }
 
 
@@ -46,12 +57,15 @@ body {
 }
 
 aside {
-    background: $color-secondary;
     height: 60vh;
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 15vh;
+    top: 20vh;
     right: 0;
+
+    & ul {
+        list-style: none;
+    }
 }
 
 main {

@@ -1,4 +1,4 @@
-@import "../partials/variables";
+@import "../variables/variables";
 
 @function strip-units($value) {
     @return $value / ($value * 0 + 1);
