@@ -11,6 +11,11 @@ $color-counter: 0;
     @debug $color;
 
     @each $co in map-keys($map) {
+
+        .#{$color} {
+            background: map-get($map, "primary");
+        }
+
         .#{$color}.#{$co}
         {
             background: map-get($map, $co);

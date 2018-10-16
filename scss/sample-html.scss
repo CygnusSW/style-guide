@@ -20,9 +20,15 @@ p {
     position: sticky;
     top: 0px;
     margin: 0px;
-    background: #FFFFFF;
-    @extend .z-depth-25;
+    padding: 20px 0px;
+    color: #FFFFFF;
     z-index: 26;
+
+    & h4, & ul, & ul li {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
     & nav {        
         align-items: flex-end;
     }
@@ -30,9 +36,16 @@ p {
         display: inline-block;   
         align-items: center;  
         justify-content:center;   
-        & li {
+        & li, & a {
             display: inline-block;
             margin-left: 50px;
+            color: #FFFFFF;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+                color: #000000;
+            }
         }
     }
 }

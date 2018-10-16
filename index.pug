@@ -3,9 +3,9 @@ html
     header
         link(rel="stylesheet" href="css/sample.css")
     body(class="row")
-        div(class="col xs12 row style-guide-title z-depth-8")
-            h1(class="col xs6") Cygnus Style Guide
-            nav(class="col xs6 row")
+        div(class="col xs12 row style-guide-title deep-orange darken-2")
+            h4(class="col xs12 m4") Cygnus Style Guide
+            nav(class="col xs6 m8 row")
                 ul(class="row")
                     li 
                         a(href="#grid-flex") Grid (Flex)
@@ -16,9 +16,25 @@ html
                     li 
                         a(href="#typography") Typography
         main(class="col xs12")
+            section(class="intro")
+                a(name="intro")
+                h3 Cygnus Stylesheet
+                p The Cygnus Stylesheet is a living document capturing the basing tools used to create applications in cygnus software.
+                div(class="variables")
+                    h4 Variables
+                    p Override these variables for your project:
+                    ul
+                        li $base-font-size (default: 18pt)
+                        li $num-of-grid-cols (default: 12)
+                        li $breakpoints (A map of min and max breakpoints.)
+                            ul
+                                li xs: (none, none)
+                                li s: (768px, null)
+                                li m: (992px, null)
+                                li l: (1200px, null)
             section(class="grid-flex")
                 a(name="grid-flex")
-                h2 Grid (Flex-Box)
+                h3 Grid (Flex-Box)
                 div(class="row")
                     div(class="col xs12 s6 m3 l1")
                         p xs12 s6 m3 l1  
@@ -46,49 +62,49 @@ html
                         p xs12 s6 m3 l1
             section(class="depth")
                 a(name="depth")
-                h2 Depth
+                h3 Depth
                 p Based on the Material Design specification (the "Elevation" section). See the 
                      a(href="https://material.io/design/environment/elevation.html#default-elevations" target="_") source
                 |  for more information.
                 div(class="row")
                     div(class="z-depth-0 col xs12 s6 m4")
-                        h3 No .z-depth
+                        h4 No .z-depth
                         ul
                             li Text
                             li Text Button
                             li Standard Side Sheet
                     div(class="z-depth-1 col xs12 s6 m4")
-                        h3 .z-depth-1
+                        h4 .z-depth-1
                         ul
                             li Top App Bar - resting state (if not set at another value 0-4)
                             li Card (Resting Elevation)
                             li Switch
                     div(class="z-depth-2 col xs12 s6 m4")
-                        h3 .z-depth-2
+                        h4 .z-depth-2
                         ul
                             li Top App Bar - resting state (if not set at another value 0-4)
                             li Contained Button (Resting Elevation)
                     div(class="z-depth-3 col xs12 s6 m4")
-                        h3 .z-depth-3
+                        h4 .z-depth-3
                         ul
                             li Top App Bar - resting state (if not set at another value 0-4)
                             li Refresh Indicator
                             li Search Bar (Resting Elevation)
                     div(class="z-depth-4 col xs12 s6 m4")
-                        h3 .z-depth-4
+                        h4 .z-depth-4
                         ul
                             li Top App Bar (Scrolled State)
                             li Top App Bar - Resting State (if not set at another value 0-4)                    
                     div(class="z-depth-5 col xs12 s6 m4")
-                        h3 .z-depth-5                    
+                        h4 .z-depth-5                    
                     div(class="z-depth-6 col xs12 s6 m4")
-                        h3 .z-depth-6
+                        h4 .z-depth-6
                         ul
                             li Floating Action Button (FAB - resting elevation) Snackbar
                     div(class="z-depth-7 col xs12 s6 m4")
-                        h3 .z-depth-7
+                        h4 .z-depth-7
                     div(class="z-depth-8 col xs12 s6 m4")
-                        h3 .z-depth-8
+                        h4 .z-depth-8
                         ul
                             li Bottom Nav Bar
                             li Bottom App Bar
@@ -96,74 +112,74 @@ html
                             li Card (when picked up)
                             li Contained Button (when pressed)
                     div(class="z-depth-9 col xs12 s6 m4")
-                        h3 .z-depth-9
+                        h4 .z-depth-9
                     div(class="z-depth-10 col xs12 s6 m4")
-                        h3 .z-depth-10
+                        h4 .z-depth-10
                     div(class="z-depth-11 col xs12 s6 m4")
-                        h3 .z-depth-11
+                        h4 .z-depth-11
                     div(class="z-depth-12 col xs12 s6 m4")
-                        h3 .z-depth-12
+                        h4 .z-depth-12
                         ul
                             li Floating Action Button (FAB - Pressed)
                     div(class="z-depth-13 col xs12 s6 m4")
-                        h3 .z-depth-13
+                        h4 .z-depth-13
                     div(class="z-depth-14 col xs12 s6 m4")
-                        h3 .z-depth-14
+                        h4 .z-depth-14
                     div(class="z-depth-15 col xs12 s6 m4")
-                        h3 .z-depth-15
+                        h4 .z-depth-15
                     div(class="z-depth-16 col xs12 s6 m4")
-                        h3 .z-depth-16
+                        h4 .z-depth-16
                         ul
                             li Modal Bottom Sheet
                             li Modal Top Sheet
                             li Navigation Drawer
                     div(class="z-depth-17 col xs12 s6 m4")
-                        h3 .z-depth-17
+                        h4 .z-depth-17
                     div(class="z-depth-18 col xs12 s6 m4")
-                        h3 .z-depth-18
+                        h4 .z-depth-18
                     div(class="z-depth-19 col xs12 s6 m4")
-                        h3 .z-depth-19
+                        h4 .z-depth-19
                     div(class="z-depth-20 col xs12 s6 m4")
-                        h3 .z-depth-20
+                        h4 .z-depth-20
                     div(class="z-depth-21 col xs12 s6 m4")
-                        h3 .z-depth-21
+                        h4 .z-depth-21
                     div(class="z-depth-22 col xs12 s6 m4")
-                        h3 .z-depth-22
+                        h4 .z-depth-22
                     div(class="z-depth-23 col xs12 s6 m4")
-                        h3 .z-depth-23
+                        h4 .z-depth-23
                     div(class="z-depth-24 col xs12 s6 m4")
-                        h3 .z-depth-24                          
+                        h4 .z-depth-24                          
                     div(class="z-depth-25 col xs12 s6 m4")
-                        h3 .z-depth-25
+                        h4 .z-depth-25
                         ul
                             li Modals
                             li Dialogs
             section(class="colors")
                 a(name="color")
-                h2 Colors
+                h3 Colors
                 p Default colors are pulled from the materialize spec.
                 div(class="row")
                     each color, index in ["materialize-red", "red", "pink", "purple", "deep-purple", "indigo", "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange", "deep-orange", "brown", "blue-grey", "grey"]
-                        div(class="col xs12 m3 m-b-50")
+                        div(class="color-container col xs12 m4 m-b-40")
                             h4(class="m-b-0")= color
-                            div(class=color + " lighten-5")= "." + color + ".lighten-5"
-                            div(class=color + " lighten-4")= "." + color + ".lighten-4"
-                            div(class=color + " lighten-3")= "." + color + ".lighten-3"
-                            div(class=color + " lighten-2")= "." + color + ".lighten-2"
-                            div(class=color + " lighten-1")= "." + color + ".lighten-1"
-                            div(class=color + " primary")= "." + color + ".primary"
-                            div(class=color + " darken-1")= "." + color + ".darken-1"
-                            div(class=color + " darken-2")= "." + color + ".darken-2"
-                            div(class=color + " darken-3")= "." + color + ".darken-3"
-                            div(class=color + " darken-4")= "." + color + ".darken-4"
+                            div(class=color + " lighten-5 color-tint")= "." + color + ".lighten-5"
+                            div(class=color + " lighten-4 color-tint")= "." + color + ".lighten-4"
+                            div(class=color + " lighten-3 color-tint")= "." + color + ".lighten-3"
+                            div(class=color + " lighten-2 color-tint")= "." + color + ".lighten-2"
+                            div(class=color + " lighten-1 color-tint")= "." + color + ".lighten-1"                            
+                            div(class=color + " color-tint")= "." + color
+                            div(class=color + " darken-1 color-tint")= "." + color + ".darken-1"
+                            div(class=color + " darken-2 color-tint")= "." + color + ".darken-2"
+                            div(class=color + " darken-3 color-tint")= "." + color + ".darken-3"
+                            div(class=color + " darken-4 color-tint")= "." + color + ".darken-4"
                             if index < 17 && index > 0
-                                div(class=color + " accent-1")= "." + color + ".accent-1"
-                                div(class=color + " accent-2")= "." + color + ".accent-2"
-                                div(class=color + " accent-3")= "." + color + ".accent-3"
-                                div(class=color + " accent-4")= "." + color + ".accent-4"
+                                div(class=color + " accent-1 color-tint")= "." + color + ".accent-1"
+                                div(class=color + " accent-2 color-tint")= "." + color + ".accent-2"
+                                div(class=color + " accent-3 color-tint")= "." + color + ".accent-3"
+                                div(class=color + " accent-4 color-tint")= "." + color + ".accent-4"
             section(class="typography")
                 a(name="typography")
-                h2 Typography
+                h3 Typography
                 h1 Heading 1
                 h2 Heading 2
                 h3 Heading 3
@@ -171,3 +187,4 @@ html
                 h5 Heading 5
                 h6 Heading 6
                 p Paragraph
+            script(type="text/javascript" src="./js/sample-page.js") 
