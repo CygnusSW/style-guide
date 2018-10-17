@@ -7,12 +7,16 @@ html, body {
     margin: 0px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, nav ul li {
     font-family: $header-font-family;
 }
 
 h1 {
     font-size: $base-font-size * 2;
+}
+
+p, label, input, td,th {
+    font-family: $body-font-family;
 }
 
 p {

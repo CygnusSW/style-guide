@@ -1,5 +1,5 @@
-@import "https://fonts.googleapis.com/css?family=Fahkwang|PT+Sans";
-@import "https://fonts.googleapis.com/css?family=Fahkwang|PT+Sans";
+@import url("https://fonts.googleapis.com/css?family=Fahkwang|PT+Sans");
+@import url("https://fonts.googleapis.com/css?family=Fahkwang|PT+Sans");
 .m-0 {
   margin: 0; }
 
@@ -2609,11 +2609,14 @@ html, body {
   padding: 0px;
   margin: 0px; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, nav ul li {
   font-family: "Fahkwang", sans-serif; }
 
 h1 {
   font-size: 36pt; }
+
+p, label, input, td, th {
+  font-family: "PT Sans", sans-serif; }
 
 p {
   font-size: 18pt;
