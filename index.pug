@@ -4,17 +4,19 @@ html
         link(rel="stylesheet" href="css/sample.css")
     body(class="row")
         div(class="col xs12 row style-guide-title deep-orange darken-2")
-            h4(class="col xs12 m4") Cygnus Style Guide
-            nav(class="col xs6 m8 row")
+            h4(class="col xs12 m3") Cygnus Stylesheet
+            nav(class="col xs12 m9 row")
                 ul(class="row")
+                    li
+                        a(href="#instructions") Instructions
                     li 
-                        a(href="#grid-flex") Grid (Flex)
+                        a(href="#grid-flex") Flex-Grid
                     li 
                         a(href="#depth") Depth
                     li
-                        a(href="#color") Colors
+                        a(href="#color") Color
                     li 
-                        a(href="#typography") Typography
+                        a(href="#typography") Type
         main(class="col xs12")
             section(class="intro")
                 a(name="intro")
@@ -32,6 +34,15 @@ html
                                 li s: (768px, null)
                                 li m: (992px, null)
                                 li l: (1200px, null)
+                        li $header-font-family (default: "Fahkwang", sans-serif)
+                        li $body-font-family (default: "PT Sans", sans-serif)
+            section(class="instructions")
+                a(name="instructions")
+                h4 Instructions
+                ol
+                    li npm install --save cygnus-stylesheet 
+                    li If extending the SCSS, configure your projects variables                    
+                    li #{'<link rel="stylesheet" src="node_modules/cygnus-stylesheet/scss/main.css" >'} OR @import "node-modules/cygnus-stylesheet/scss/main.scss"
             section(class="grid-flex")
                 a(name="grid-flex")
                 h3 Grid (Flex-Box)
@@ -159,7 +170,7 @@ html
                 h3 Colors
                 p Default colors are pulled from the materialize spec.
                 div(class="row")
-                    each color, index in ["materialize-red", "red", "pink", "purple", "deep-purple", "indigo", "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange", "deep-orange", "brown", "blue-grey", "grey"]
+                    each color, index in ["main", "secondary", "tertiary", "materialize-red", "red", "pink", "purple", "deep-purple", "indigo", "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange", "deep-orange", "brown", "blue-grey", "grey"]
                         div(class="color-container col xs12 m4 m-b-40")
                             h4(class="m-b-0")= color
                             div(class=color + " lighten-5 color-tint")= "." + color + ".lighten-5"
@@ -172,7 +183,7 @@ html
                             div(class=color + " darken-2 color-tint")= "." + color + ".darken-2"
                             div(class=color + " darken-3 color-tint")= "." + color + ".darken-3"
                             div(class=color + " darken-4 color-tint")= "." + color + ".darken-4"
-                            if index < 17 && index > 0
+                            if index > 0 && index < 17
                                 div(class=color + " accent-1 color-tint")= "." + color + ".accent-1"
                                 div(class=color + " accent-2 color-tint")= "." + color + ".accent-2"
                                 div(class=color + " accent-3 color-tint")= "." + color + ".accent-3"

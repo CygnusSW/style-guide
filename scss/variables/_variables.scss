@@ -1,4 +1,5 @@
 @import "./color-variables";
+@import "https://fonts.googleapis.com/css?family=Fahkwang|PT+Sans";
 
 $base-font-size: 18pt !default;
 $num-of-grid-cols: 12 !default;
@@ -12,10 +13,9 @@ $breakpoints: (
     l: (1200px, null)
 ) !default;
 
-$color-primary: color("blue", "primary") !default;
-$color-secondary: color("orange", "accent-1") !default;
-$color-tertiary: color("green", "accent-3") !default;
 
+$header-font-family: "Fahkwang", sans-serif  !default;
+$body-font-family: "PT Sans", sans-serif !default;
 
 
 

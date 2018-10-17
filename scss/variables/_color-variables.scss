@@ -336,7 +336,16 @@ $shades: (
   "transparent":  transparent
 );
 
+$main: $deep-orange;
+$secondary: $blue;
+$tertiary: $materialize-red;
+
+
+
 $colors: (
+  "main": $main,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
   "materialize-red": $materialize-red,
   "red": $red,
   "pink": $pink,
