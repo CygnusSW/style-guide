@@ -1,15 +1,15 @@
 {
   "name": "cygnus-stylesheet",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha",
   "description": "",
-  "main": "index.js",
+  "main": "./scss/main.scss",
   "scripts": {
     "sass:watch": "sass --watch scss/sample-html.scss:css/sample.css scss/main.scss:css/main.css",
     "pug:watch": "pug --watch index.pug index.html",
     "serve": "concurrently \"npm run-script sass:watch\" \"npm run-script pug:watch\""
   },
   "author": "Cory Johnson",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "concurrently": "^4.0.1",
     "pug": "^2.0.3",

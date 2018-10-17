@@ -32,8 +32,12 @@ $currIndex: 0;
 {
     @include breakpoint($breakpoint)
     {
-        @for $col from 0 through $num-of-grid-cols {    
-    
+        .#{$breakpoint}#{"0"} {
+            display: none
+        };
+
+        @for $col from 1 through $num-of-grid-cols {        
+
             @if ($col != $num-of-grid-cols)
             { 
                 .#{$breakpoint}#{$col} {
