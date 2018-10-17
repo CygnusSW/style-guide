@@ -1,6 +1,6 @@
 {
   "name": "cygnus-stylesheet",
-  "version": "0.0.1-alpha",
+  "version": "0.0.3-alpha",
   "description": "",
   "main": "./scss/main.scss",
   "scripts": {
