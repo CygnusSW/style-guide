@@ -1,5 +1,60 @@
+@import "./colors";
+
 .clearfix {    
 	clear: both;
 	padding: 0px;
 	margin: 0px;
 }
+
+.pointer {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.underline-hover {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.ease-in-top {
+    transform: translateY(100vh);
+}
+
+.ease-in-right {
+	transform: translateX(-100%);
+}
+
+.ease-in-bottom {
+	transform: translateY(-100vh);
+}
+
+.ease-in-left {
+    transform: translateX(100%);
+}
+
+.white-hover {
+    &:hover {
+        color: color("shades", "white");
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.align-left {
+    text-align:left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}
+
+
+

@@ -8,9 +8,10 @@ $grid-margin: 1.6% !default;
 // (min-width, max-width)
 $breakpoints: (
     xs: (null, null),
-    s: (768px, null),
-    m: (992px, null),
-    l: (1200px, null)
+    s: (300px, null),//Mobile: Iphone x is 812px
+    m: (815px, null), //Tablet
+    l: (1028px, null),//Tablets/Desktops
+    xl: (1366px, null)//Desktops
 ) !default;
 
 
